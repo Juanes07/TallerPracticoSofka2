@@ -1,8 +1,8 @@
-package filter;
+package TallerPracticosofka2.filter;
 import java.util.Scanner;
-import filter.MannedSpacecraft;
-import filter.TransportSpaceship;
-import filter.UnmannedSpacecraft;
+import TallerPracticosofka2.filter.MannedSpacecraft;
+import TallerPracticosofka2.filter.TransportSpaceship;
+import TallerPracticosofka2.filter.UnmannedSpacecraft;
 /**
  *
  * @author JUANES

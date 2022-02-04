@@ -1,5 +1,5 @@
 
-package filter;
+package TallerPracticosofka2.filter;
 import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.Arrays;
