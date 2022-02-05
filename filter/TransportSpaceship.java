@@ -11,28 +11,31 @@ public class TransportSpaceship extends Spaceships {
     /**
      * constructor de la clase TransportSpaceship 
      */
+    public String operation;
+    public long initialWeight;
     public TransportSpaceship() {
         
         this.efficient = false;
         this.interplanetary = false;
-        this.weight = 1000;
+        this.weight = 0;
+        this.initialWeight = 1000;
+        
     }
-    String [] operationShip = new String[3];
-    
-    public String[] typeOperation() {
-        operationShip[0] = "Transporte de carga pesada";
-        operationShip[1] = "lanzar una sonda";
-        operationShip[2] = "llevar tripulacion Humana";
-        return operationShip;
+ 
+    public String getOperation() {
+        return operation;
     }
-    
+
     /**
      * Refleja el peso asignado en el constructor
      * @return el peso de la nave tripulada
      */
-    
+    public void setOperation(String operation) {
+        this.operation = operation;
+    }
+
     public long getWeight() {
-        System.out.println("Por lo general este tipo de naves va a tener un peso aproximado de" + weight);
+        
         return weight;
     }
     
@@ -42,7 +45,7 @@ public class TransportSpaceship extends Spaceships {
      */
     
     public void setWeight(long weight) {
-        System.out.println("Esta Nave pesaria" + weight);
+        
         this.weight = weight;
     }
     
@@ -51,18 +54,16 @@ public class TransportSpaceship extends Spaceships {
      * @return un false del atributo efficient
      */
     
-    public boolean isEfficient() {
-        System.out.println("Este tipo de naves es  eficiente siempre y cuando sea poca su carga");
+    public boolean getEfficient() {
         return efficient;
     }
     
     /**
-    * Refleja valor true o false de la variable efficiente asignado por el usuario
-    * @param efficient sera un false o true
+    * Refleja valor true o false 
+    * @param efficient sera un false
     */
     
     public void setEfficient(boolean efficient) {
-        System.out.println("Este tipo de naves es poco eficiente");
         this.efficient = efficient;
     }
     
@@ -72,7 +73,6 @@ public class TransportSpaceship extends Spaceships {
      */
     
     public boolean isInterplanetary() {
-        System.out.println("Este tipo de naves sera interplanetaria en futuro lejano");
         return interplanetary;
     }
 
@@ -81,7 +81,6 @@ public class TransportSpaceship extends Spaceships {
      * @param interplanetary puede ser false o true
      */
     public void setInterplanetary(boolean interplanetary) {
-        System.out.println("Este tipo de naves no es interplanetaria");
         this.interplanetary = interplanetary;
     }
     
@@ -91,9 +90,8 @@ public class TransportSpaceship extends Spaceships {
     
     @Override
     public void infoGeneral() {
-        System.out.println("La informacion general de una nave lanzadora es" + "Su peso puede variar desde: " + weight + " Hasta 3000 kilogramos");
+        System.out.println("La informacion general de una nave lanzadora es: Su peso puede variar desde: " + initialWeight + " Hasta 3000 kilogramos");
         System.out.println("Son eficientes? " + efficient + " debido a su alto consumo de combustible y no tienen el impulso suficiente para salir de la orbita gravitacional de la tierra");
         System.out.println("Pueden llegar a otros planetas? " + interplanetary + " Debido a su alto consumo de combustible se investigan otro tipo de naves para hacer viajes ida y regreso por ejemplo a marte");
-    }
-     
+    }  
 }

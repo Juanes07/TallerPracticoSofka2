@@ -7,14 +7,17 @@ import java.util.Arrays;
  * @author JUANES
  */
 public class SpaceTransportSystem extends Spaceships implements IInfoExtra {
-     
-    public int seats = 0;
+    
+    public long initialWeight;
+    /**
+     * constructor Spaceships
+     */
     public SpaceTransportSystem() {
         this.efficient = false;
         this.interplanetary = false;
-        this.weight = 100000;
-        this.seats = 7;
-
+        this.weight = 0;
+        this.initialWeight = 100000;
+      
     }
     
     public String [] nameShips(){
@@ -22,15 +25,12 @@ public class SpaceTransportSystem extends Spaceships implements IInfoExtra {
         nameShips[6] = "Experimentos en la EEI";
         return nameShips;
     }
-
-    public int getSeats() {
-        return seats;
-    }
-
-    public void setSeats(int seats) {
-        this.seats = seats;
-    }
-
+    
+    /**
+     * 
+     * @return seats
+     */
+    
     public long getWeight() {
         return weight;
     }
@@ -83,8 +83,10 @@ public class SpaceTransportSystem extends Spaceships implements IInfoExtra {
      /**
      * Se hace una Sobrecarga del metodo workingTime heredado de la clase Spaceships
      */
-     public  void workingTime(int years, int year){    
+    
+     public  int workingTime(int years, int year){    
         System.out.println("Funciono desde " + years +" hasta " + year);
+        return year;
     }
      
      /**
@@ -94,7 +96,7 @@ public class SpaceTransportSystem extends Spaceships implements IInfoExtra {
     @Override
     public void infoGeneral() {
         
-        System.out.println("La informacion general de un Transbordador espacial  es: " + "Su peso puede ser de mas de: " + weight + " kilogramos");
+        System.out.println("La informacion general de un Transbordador espacial  es: " + "Su peso puede ser de mas de: " + initialWeight + " kilogramos");
         System.out.println("Son eficientes? "  + efficient + " debido a que se necesita de una nave extra para brindarle mayor impulso y salir de orbitra actualmente se estudian otras tecnologias para tener menor consumo pero mayor impulso");
         System.out.println("Pueden llegar a otros planetas? " + interplanetary + " ya que se utilizaron mayormente para experimentos en orbita y lanzamiento de satelites. incluso para la construccion de la EEI");
         System.out.println("Alcanza una velocidad maxima de despegue de: "+ averageSpeed + " Kilometros");

@@ -12,14 +12,6 @@ public class UnmannedSpacecraft extends Spaceships {
         this.weight = 100;
         this.interplanetary = true;
     }
-     String [] typeoperationShip = new String[2];
-    
-    public String[] objectiveUnmannedSpace() {
-        typeoperationShip[0] = "Lanzar sonda orbital cercana";
-        typeoperationShip[1] = "lanzar sonda interplanetaria";
-
-        return typeoperationShip;
-    }  
 
     /**
      * Refleja el peso asignado en el constructor
