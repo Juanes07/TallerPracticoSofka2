@@ -17,7 +17,10 @@ public abstract class Spaceships {
     
     public  void workingTime(){    
         System.out.println("1970 hasta ");
-    }
+    }   
+    /**
+     * Con este metodo buscamos que por cada clase se de una informacion general de dicha clase
+     */
     public abstract void infoGeneral();
     
 }

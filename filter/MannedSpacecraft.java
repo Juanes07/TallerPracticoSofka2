@@ -6,23 +6,31 @@ import java.util.Arrays;
  * @author JUANES
  */
 public class MannedSpacecraft extends Spaceships implements IInfoExtra{
-
+    /**
+     * constructor de la clase MannedSpacecraft
+     */
     public MannedSpacecraft() {
-        
-      
         this.efficient = true;
         this.interplanetary = false;
         this.weight = 400;
     }
-    
+    /**
+     * Creamos un arraylist al cual le especificamos el tamaño de este
+     */
     String [] typeOperationMannedSpace = new String[2];
-    
+    /**
+     * le agregamos sus elementos al arraylist typeOperationMannedSpace
+     * @return typeOperationMannedSpace 
+     */
     public String [] Spaceships(){
         typeOperationMannedSpace[0] = "Mision de mantenimiento";
         typeOperationMannedSpace[1] = "Experimentos en la EEI";
         return typeOperationMannedSpace;
     }
-
+    /**
+     * 
+     * @return 
+     */
     public long getWeight() {
         return weight;
     }
@@ -46,7 +54,11 @@ public class MannedSpacecraft extends Spaceships implements IInfoExtra{
     public void setInterplanetary(boolean interplanetary) {
         this.interplanetary = interplanetary;
     }
-
+    
+    /**
+     * Se hace una Sobreescritura del metodo infoGeneral heredado de la clase Spaceships
+     */
+    
     @Override
     public void infoGeneral() {
         System.out.println("La informacion general de una nave tripulada es: " + "Su peso puede variar desde: " + weight + " Hasta 1000 kilogramos");

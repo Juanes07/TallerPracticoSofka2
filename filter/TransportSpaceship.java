@@ -54,9 +54,9 @@ public class TransportSpaceship extends Spaceships {
         this.interplanetary = interplanetary;
     }
     
-    
-    
-    
+     /**
+     * Se hace una Sobreescritura del metodo infoGeneral heredado de la clase Spaceships
+     */
     
     @Override
     public void infoGeneral() {

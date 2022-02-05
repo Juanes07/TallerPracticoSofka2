@@ -54,12 +54,17 @@ public class SpaceTransportSystem extends Spaceships implements IInfoExtra {
     public void setInterplanetary(boolean interplanetary) {
         this.interplanetary = interplanetary;
     }
-
+     /**
+     * Se hace una Sobrecarga del metodo workingTime heredado de la clase IInfoExtra
+     */
      public static void workingTime(int year){    
         System.out.println("Funciono desde 1970 hasta " + year);
     }
-    
-    
+     
+     /**
+     * Se hace una Sobreescritura del metodo infoGeneral heredado de la clase Spaceships
+     */
+     
     @Override
     public void infoGeneral() {
         
