@@ -1,9 +1,8 @@
-
 package filter;
 import java.util.Arrays;
 
 /**
- *  STS hace referencia a las siglas en inlges de  Space Transport System o sistema de transporte espacial, nombre clave de los transbordadores
+ * 
  * @author JUANES
  */
 public class SpaceTransportSystem extends Spaceships implements IInfoExtra {
@@ -15,8 +14,7 @@ public class SpaceTransportSystem extends Spaceships implements IInfoExtra {
     public SpaceTransportSystem() {
         this.efficient = false;
         this.interplanetary = false;
-        this.weight = 0;
-        this.initialWeight = 100000;
+        this.initialWeight = 10000;
       
     }
     
@@ -27,11 +25,11 @@ public class SpaceTransportSystem extends Spaceships implements IInfoExtra {
     }
     
     /**
-     * 
-     * @return seats
+     * Refleja el peso asignado en el constructor 
+     * @return weight peso en kilogramos de la nave SpaceTransportSystem
      */
     
-    public long getWeight() {
+    public long initialWeight() {
         return weight;
     }
     
@@ -58,7 +56,7 @@ public class SpaceTransportSystem extends Spaceships implements IInfoExtra {
     * @param efficient sera un false o true
     */
     
-    
+        
     public void setEfficient(boolean efficient) {
         this.efficient = efficient;
     }
@@ -82,6 +80,7 @@ public class SpaceTransportSystem extends Spaceships implements IInfoExtra {
     }
      /**
      * Se hace una Sobrecarga del metodo workingTime heredado de la clase Spaceships
+     * @return year tipo Int, año de finalizacion de operacion de la nave
      */
     
      public  int workingTime(int years, int year){    
@@ -96,7 +95,7 @@ public class SpaceTransportSystem extends Spaceships implements IInfoExtra {
     @Override
     public void infoGeneral() {
         
-        System.out.println("La informacion general de un Transbordador espacial  es: " + "Su peso puede ser de mas de: " + initialWeight + " kilogramos");
+        System.out.println("La informacion general de un Transbordador espacial  es: Su peso puede ser de mas de: " + initialWeight + " kilogramos");
         System.out.println("Son eficientes? "  + efficient + " debido a que se necesita de una nave extra para brindarle mayor impulso y salir de orbitra actualmente se estudian otras tecnologias para tener menor consumo pero mayor impulso");
         System.out.println("Pueden llegar a otros planetas? " + interplanetary + " ya que se utilizaron mayormente para experimentos en orbita y lanzamiento de satelites. incluso para la construccion de la EEI");
         System.out.println("Alcanza una velocidad maxima de despegue de: "+ averageSpeed + " Kilometros");

@@ -14,29 +14,28 @@ public class TransportSpaceship extends Spaceships {
     public String operation;
     public long initialWeight;
     public TransportSpaceship() {
-        
         this.efficient = false;
         this.interplanetary = false;
         this.weight = 0;
         this.initialWeight = 1000;
         
     }
- 
+    
+    /**
+     * regresa un String sobre el tipo de operacion asignado 
+     * @return opertion String 
+     */
     public String getOperation() {
         return operation;
     }
 
-    /**
-     * Refleja el peso asignado en el constructor
-     * @return el peso de la nave tripulada
-     */
+   /**
+    * 
+    * @param operation 
+    */
+    
     public void setOperation(String operation) {
         this.operation = operation;
-    }
-
-    public long getWeight() {
-        
-        return weight;
     }
     
     /**

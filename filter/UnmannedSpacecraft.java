@@ -71,7 +71,7 @@ public class UnmannedSpacecraft extends Spaceships {
     
     @Override
     public void infoGeneral() {
-        System.out.println("La informacion general de una nave no tripulada es: " + "Su peso puede variar desde: " + weight + " Hasta 1000 kilogramos");
+        System.out.println("La informacion general de una nave no tripulada es: Su peso puede variar desde: " + weight + " Hasta 1000 kilogramos");
         System.out.println("Son eficientes? "  + efficient + " debido a su bajo consumo de combustible");
         System.out.println("Pueden llegar a otros planetas? " + interplanetary + " al tener un empuje bajo permite recorrer largas distancias por inercia");
     }

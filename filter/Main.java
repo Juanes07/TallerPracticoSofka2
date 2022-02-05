@@ -43,8 +43,9 @@ public class Main {
          * Se instancia la clase SpaceTransportSystem;
          */
         
-        SpaceTransportSystem sts;
-        sts = new SpaceTransportSystem();
+        SpaceTransportSystem spaceTransportSystem;
+        spaceTransportSystem = new SpaceTransportSystem();
+        
         
         /**
          * se agrega un Scanner para permitir ingresar datos en la consola del
@@ -68,7 +69,7 @@ public class Main {
                 int opcion = scanner.nextInt();
                 switch (opcion) {
                     case 1:
-                        System.out.println("Haz elegido: una Nave lanzadora y tiene estas caracteristicas generales: ");
+                        System.out.println("Haz elegido: una Nave lanzadora: ");
                         transportSpaceship.infoGeneral();
                         break;
                     case 2:
@@ -81,8 +82,8 @@ public class Main {
                         break;
                     case 4:
                         System.out.println("Haz elegido: un Transbordador");
-                        sts.workingTime(1970, 2011);
-                        sts.infoGeneral();
+                        spaceTransportSystem.workingTime(1970, 2011);                       
+                        spaceTransportSystem.infoGeneral();
                         break;
                     default:
                         System.out.println("ups, esa no era una opcion correcta, comienza de nuevo por favor");
@@ -106,14 +107,14 @@ public class Main {
                         int launchWeightUnmannedSpace = scanner.nextInt();
                         unmannedSpaceCraft.setWeight(launchWeightUnmannedSpace);
                         System.out.println("Que tipo sonda lanzarias?: 1)Lanzar sonda orbital cercana 2)lanzar sonda interplanetaria.  Ingresa el numero de la opcion");
-                        int typeOperationShipUnmannedSpace = scanner.nextInt();
-                        
+                        int typeOperationShipUnmannedSpace = scanner.nextInt();                      
                         System.out.println("La vas a usar para: " + typeoperationShipUnmannedSpaceCraft[typeOperationShipUnmannedSpace - 1]);
                         System.out.println("Tu nave va a pesar: " + launchWeightUnmannedSpace + " kilogramos" + " y su uso sera para: " + typeoperationShipUnmannedSpaceCraft[typeOperationShipUnmannedSpace - 1]);
                         break;
                     case 3:
-                        System.out.println("Cuanto pesaria tu nave no tripulada? (menor a 1000 kilogramos)");
+                        System.out.println("Cuanto pesaria tu nave  tripulada? (menor a 1000 kilogramos)");
                         int launchWeightMannedSpace = scanner.nextInt();
+                        spaceTransportSystem.setWeight(launchWeightMannedSpace);     
                         System.out.println("Que tipo de mision realiza la tripulacion? 1) mision de mantemiento 2)Experimentos en la EEI. Ingresa el numero de la opcion ");
                         int typeOperationMannedSpace = scanner.nextInt();
                         System.out.println("La vas a usar para: " + operationHuman[typeOperationMannedSpace - 1]);
