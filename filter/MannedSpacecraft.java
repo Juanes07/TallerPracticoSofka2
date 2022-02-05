@@ -13,7 +13,6 @@ public class MannedSpacecraft extends Spaceships implements IInfoExtra{
         this.efficient = true;
         this.interplanetary = false;
         this.weight = 400;
-        this.operation = "Mantenimiento";
     }
     
     String [] typeOperationMannedSpace = new String[2];
@@ -22,14 +21,6 @@ public class MannedSpacecraft extends Spaceships implements IInfoExtra{
         typeOperationMannedSpace[0] = "Mision de mantenimiento";
         typeOperationMannedSpace[1] = "Experimentos en la EEI";
         return typeOperationMannedSpace;
-    }
-
-    public String getOperation() {
-        return operation;
-    }
-
-    public void setOperation(String operation) {
-        this.operation = operation;
     }
 
     public long getWeight() {

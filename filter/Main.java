@@ -5,6 +5,7 @@ import filter.TransportSpaceship;
 import filter.UnmannedSpacecraft;
 import filter.Spaceships;
 import java.util.Arrays;
+import filter.Sts;
 
 /**
  *
@@ -22,6 +23,9 @@ public class Main {
         MannedSpacecraft msc;
         msc = new MannedSpacecraft();
         String [] spaceManned = msc.Spaceships();
+        Sts Shuttle;
+        Shuttle = new Sts();
+        
           
           Scanner sc = new Scanner(System.in);
           boolean makeShip;
@@ -29,7 +33,7 @@ public class Main {
           System.out.println("Ingresa un valor boleano (true o false). True para traer info general de las naves. False para crear tu propia nave");
           makeShip =  sc.nextBoolean();
           if(makeShip == true){
-                    System.out.println("De que tipo de nave quieres traer informacion? 1) lanzadoras, 2) No tripuladas, 3) Tripuladas ");
+                    System.out.println("De que tipo de nave quieres traer informacion? 1) lanzadoras, 2) No tripuladas, 3) Tripuladas, 4) Transbordador Espacial. Ingresa el numero de la opcion");
                     int opcion = sc.nextInt();
                 switch(opcion){
                     case 1: System.out.println("Haz elegido: una Nave lanzadora y tiene estas caracteristicas generales: ");
@@ -40,6 +44,10 @@ public class Main {
                         break;
                     case 3: System.out.println("Haz elegido: una Nave Tripulada/Mantenimiento");
                             msc.infoGeneral();
+                        break;
+                    case 4: System.out.println("Haz elegido: un Transbordador");
+                        Shuttle.workingTime(2011);
+                        Shuttle.infoGeneral();
                         break;
                         default: System.out.println("ups, esa no era una opcion correcta, comienza de nuevo por favor");  
                     }

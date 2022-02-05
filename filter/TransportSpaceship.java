@@ -23,18 +23,6 @@ public class TransportSpaceship extends Spaceships {
         operationShip[2] = "llevar tripulacion Humana";
         return operationShip;
     }
-    
-
-    public String getOperation() {
-        System.out.println("El tipo de operacion de estas naves puede ser de: " + operationShip);
-        return operation;
-    }
-
-    public void setOperation(String operation) {
-        System.out.println("El tipo de operacion de estas naves puede ser de: " + operation);
-        this.operation = operation;
-       
-    }
 
     public long getWeight() {
         System.out.println("Por lo general este tipo de naves va a tener un peso aproximado de" + weight);
