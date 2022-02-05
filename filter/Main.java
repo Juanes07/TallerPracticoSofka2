@@ -62,7 +62,7 @@ public class Main {
                                 msc.infoGeneral();
                                 break;
                             case 4: System.out.println("Haz elegido: un Transbordador");
-                                sts.workingTime(2011);
+                                sts.workingTime(1970,2011);
                                 sts.infoGeneral();
                                 break;
                                 default: System.out.println("ups, esa no era una opcion correcta, comienza de nuevo por favor");  
@@ -96,6 +96,7 @@ public class Main {
                                 };
                             };
           } while(makeShip = true || false );  
+          sc.close();
     }
 }
          
