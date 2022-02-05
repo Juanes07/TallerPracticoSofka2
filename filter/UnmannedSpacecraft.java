@@ -1,8 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package TallerPracticosofka2.filter;
+package filter;
 
 /**
  *
@@ -11,10 +7,19 @@ package TallerPracticosofka2.filter;
 public class UnmannedSpacecraft extends Spaceships {
 
     public UnmannedSpacecraft() {
+        
         this.efficient = true;
         this.weight = 100;
         this.interplanetary = true;
     }
+     String [] typeoperationShip = new String[2];
+    
+    public String[] objectiveUnmannedSpace() {
+        typeoperationShip[0] = "Lanzar sonda orbital cercana";
+        typeoperationShip[1] = "lanzar sonda interplanetaria";
+
+        return typeoperationShip;
+    }  
 
 
 
@@ -54,7 +59,9 @@ public class UnmannedSpacecraft extends Spaceships {
     
     @Override
     public void infoGeneral() {
-        
+        System.out.println("La informacion general de una nave no tripulada es: " + "Su peso puede variar desde: " + weight + " Hasta 1000 kilogramos");
+        System.out.println("Son eficientes? "  + efficient + " debido a su bajo consumo de combustible");
+        System.out.println("Pueden llegar a otros planetas? " + interplanetary + " al tener un empuje bajo permite recorrer largas distancias por inercia");
     }
     
 }

@@ -1,5 +1,5 @@
 
-package TallerPracticosofka2.filter;
+package filter;
 import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -14,11 +14,19 @@ public class TransportSpaceship extends Spaceships {
         this.efficient = false;
         this.interplanetary = false;
         this.weight = 1000;
-        this.operation = "Carga pesada";
     }
+    String [] operationShip = new String[3];
+    
+    public String[] typeOperation() {
+        operationShip[0] = "Transporte de carga pesada";
+        operationShip[1] = "lanzar una sonda";
+        operationShip[2] = "llevar tripulacion Humana";
+        return operationShip;
+    }
+    
 
     public String getOperation() {
-        System.out.println("El tipo de operacion de estas naves puede ser de: " + operation);
+        System.out.println("El tipo de operacion de estas naves puede ser de: " + operationShip);
         return operation;
     }
 
@@ -64,10 +72,9 @@ public class TransportSpaceship extends Spaceships {
     
     @Override
     public void infoGeneral() {
-        System.out.println("La informacion general de una nave lanzadora es: " + "Su peso puede variar desde: " + weight + " Hasta 3000 kilogramos");
-        System.out.println("Son eficientes?" + efficient +"debido a su alto consumo de combustible y no tienen el impulso suficiente para salir de la orbita gravitacional de la tierra");
-        System.out.println("Pueden llegar a otros planetas?" + interplanetary + "Debido a su alto consumo de combustible se investigan otro tipo de naves para hacer viajes ida y regreso por ejemplo a marte");
-  
+        System.out.println("La informacion general de una nave lanzadora es" + "Su peso puede variar desde: " + weight + " Hasta 3000 kilogramos");
+        System.out.println("Son eficientes? " + efficient + " debido a su alto consumo de combustible y no tienen el impulso suficiente para salir de la orbita gravitacional de la tierra");
+        System.out.println("Pueden llegar a otros planetas? " + interplanetary + " Debido a su alto consumo de combustible se investigan otro tipo de naves para hacer viajes ida y regreso por ejemplo a marte");
     }
      
 }
