@@ -46,7 +46,7 @@ public class Main {
            * Preguntamos que si desea conocer informacion general sobre las diferentes naves o crear una propia. Se siguen las intruscciones pedidas en la consola.
            */
           do{
-             System.out.println("Ingresa un valor boleano (true o false). True para traer info general de las naves. False para crear tu propia nave o priona cualquier tecla para salir");
+             System.out.println("Ingresa un valor boleano (true o false). True para traer info general de las naves. False para crear tu propia nave o presiona cualquier tecla para salir");
                 makeShip =  sc.nextBoolean();
                     if(makeShip == true){
                         System.out.println("De que tipo de nave quieres traer informacion? 1) lanzadoras, 2) No tripuladas, 3) Tripuladas, 4) Transbordador Espacial.  el numero de la opcion");
